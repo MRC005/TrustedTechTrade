@@ -1,0 +1,93 @@
+.ttt-navbar {
+width: 100vw;
+    color: #fff;
+background: rgba(169, 170, 162, 0.75);
+    box-shadow: 0 6px 18px rgba(34, 34, 34, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    top: 0;
+    box-sizing: border-box;     
+     
+   
+}
+
+
+
+.ttt-logo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #2a2a2a;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+.ttt-logo span {
+    color: #ff6b00;
+}
+
+.nav-center {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-center a {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-center a:hover {
+    color: #ff6b00;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.icon-link {
+    color: #2a2a2a;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.icon-link:hover {
+    color: #ff6b00;
+}
+
+.user-btn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.user-btn:hover {
+    box-shadow: 0 0 0 2px #ff6b00;
+}
+
+@media (max-width: 768px) {
+    .ttt-navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem 1rem;
+    }
+    .nav-center {
+        gap: 1.2rem;
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+}

@@ -1,0 +1,62 @@
+.modal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-window {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(34,34,34,0.19);
+  padding: 2rem 2.2rem 1.2rem 2.2rem;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  position: relative;
+  animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-gadget-img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  margin: 0.5rem auto 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.modal-detail {
+  margin-bottom: 1rem;
+  font-size: 1.08rem;
+}
+
+.modal-owner {
+  margin-bottom: 1.2rem;
+  font-size: 1.03rem;
+  color: #444;
+}
+
+.modal-close-btn {
+  background: #ff6b00;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.18s;
+}
+
+.modal-close-btn:hover {
+  background: #e05d00;
+}

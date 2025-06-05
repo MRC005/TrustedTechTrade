@@ -1,0 +1,166 @@
+/* src/pages/Home.css */
+.home-bg {
+    width: 100vw;           
+    min-height: 100vh;       
+    margin: 0;              
+    padding: 0;             
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url('https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=1200');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    position: relative;
+}
+
+
+.home-content {
+padding: 30px;     
+background: rgba(246, 246, 246, 0.75);
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(34, 34, 34, 0.15);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    max-width: 800px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease-in-out;
+    margin: 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-container {
+    margin-bottom: 1.5rem;
+}
+
+.ttt-logo {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #2a2a2a;
+    position: relative;
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+}
+
+.ttt-logo span {
+    color: #ff6b00;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+    font-weight: 700;
+}
+
+.home-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: #ad4a02;
+}
+
+.home-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.home-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.home-buttons button {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #733102;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-buttons button:hover {
+    background: #e05d00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.home-buttons button:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        padding: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .home-buttons button {
+        width: 100%;
+    }
+}
+
+.ttt-footer {
+    width: 100vw;
+    color: #fff;
+background: rgba(57, 28, 2, 0.75);
+    box-shadow: 0 6px 18px rgba(34, 34, 34, 0.15);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ttt-footer a {
+  color: #dde724;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+}
