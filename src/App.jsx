@@ -1,19 +1,28 @@
-// src/App.jsx
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import Cart from "./pages/Cart";
 import Liked from "./pages/Liked";
+import dummyGadgets from "./data/dummyGadgets";
 
 function App() {
   const [cart, setCart] = useState(() => {
-    const stored = localStorage.getItem("cartGadgets");
-    return stored ? JSON.parse(stored) : [];
+    try {
+      const stored = JSON.parse(localStorage.getItem("cartGadgets"));
+      return Array.isArray(stored) ? stored : [];
+    } catch {
+      return [];
+    }
   });
   const [liked, setLiked] = useState(() => {
-    const stored = localStorage.getItem("likedGadgets");
-    return stored ? JSON.parse(stored) : [];
+    try {
+      const stored = JSON.parse(localStorage.getItem("likedGadgets"));
+      return Array.isArray(stored) ? stored : [];
+    } catch {
+      return [];
+    }
   });
 
   useEffect(() => { localStorage.setItem("cartGadgets", JSON.stringify(cart)); }, [cart]);
@@ -26,16 +35,16 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <>
       <Navbar cartCount={cart.length} likedCount={liked.length} />
       <Routes>
-        <Route path="/" element={
+        <Route path="/" element={<Home />} />
+        <Route path="/browse" element={
           <Browse
             cart={cart}
             setCart={setCart}
             liked={liked}
             setLiked={setLiked}
-            dummyGadgets={dummyGadgets}
             toggleLike={toggleLike}
           />
         } />
@@ -46,7 +55,7 @@ function App() {
           <Liked liked={liked} dummyGadgets={dummyGadgets} toggleLike={toggleLike} />
         } />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 export default App;

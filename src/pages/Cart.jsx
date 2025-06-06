@@ -1,10 +1,22 @@
-// src/pages/Cart.jsx
+import { useState } from "react";
+import PaymentModal from "../components/PaymentModal";
 import "./Cart.css";
+
 function Cart({ cart, setCart }) {
+  const [showPayment, setShowPayment] = useState(false);
+
   const total = cart.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
 
   function removeFromCart(id) {
     setCart(prev => prev.filter(item => item.id !== id));
+  }
+
+  function handleProceedToPay() {
+    setShowPayment(true);
+  }
+
+  function closePaymentModal() {
+    setShowPayment(false);
   }
 
   return (
@@ -30,7 +42,20 @@ function Cart({ cart, setCart }) {
           <div className="cart-total">
             <b>Total:</b> ₹{total.toLocaleString("en-IN")}
           </div>
+          <button
+            className="pay-btn"
+            style={{ marginTop: "2rem", fontSize: "1.1rem", padding: "0.8rem 2.5rem" }}
+            onClick={handleProceedToPay}
+          >
+            Proceed to Pay
+          </button>
         </>
+      )}
+      {showPayment && (
+        <PaymentModal
+          gadget={{ name: "All Items", price: total }}
+          onClose={closePaymentModal}
+        />
       )}
     </div>
   );

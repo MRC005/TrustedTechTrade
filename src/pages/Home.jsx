@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import { Link } from "react-router-dom";
 import "./Home.css";
 
@@ -12,8 +11,7 @@ function Home() {
         <h1>TrustedTechTrade</h1>
         <h2>Your Premium Gadget Marketplace</h2>
         <p>
-          Buy and sell certified pre-owned tech with confidence.
-          <br />
+          Buy and sell certified pre-owned tech with confidence.<br />
           Every device is quality-checked for your peace of mind.
         </p>
         <div className="home-buttons">
@@ -29,7 +27,7 @@ function Home() {
         <div className="footer-content">
           <div>
             <strong>Contact:</strong>{" "}
-            <a href="mailto:your.email@example.com">machumroy.choudhury@vitstudent.ac.in</a> | +91-9435100001
+            <a href="mailto:machumroy.choudhury@vitstudent.ac.in">machumroy.choudhury@vitstudent.ac.in</a> | +91-9435100001
           </div>
           <div>
             <strong>Address:</strong> 01,G.S Road, Guwahati, Assam, India
@@ -42,6 +40,4 @@ function Home() {
     </div>
   );
 }
-
 export default Home;
- 

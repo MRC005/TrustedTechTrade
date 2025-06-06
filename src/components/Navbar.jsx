@@ -1,16 +1,17 @@
-// src/components/Navbar.jsx
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaShoppingCart, FaHeart } from "react-icons/fa";
+import { FaShoppingCart, FaHeart, FaUserCircle } from "react-icons/fa";
+import LoginPopup from "./LoginPopup"; // import the popup
 import "./Navbar.css";
 
 function Navbar({ cartCount, likedCount }) {
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
     <nav className="ttt-navbar">
       <div className="nav-left">
         <span className="ttt-logo">
-          T
-          <span className="ttt-orange">T</span>
-          T
+          T<span className="ttt-orange">T</span>T
         </span>
       </div>
       <div className="nav-center">
@@ -27,7 +28,11 @@ function Navbar({ cartCount, likedCount }) {
           <FaHeart size={22} color="#e53935" title="Liked Items" />
           {likedCount > 0 && <span className="badge">{likedCount}</span>}
         </Link>
+        <button className="user-btn" onClick={() => setShowLogin(true)}>
+          <FaUserCircle size={26} title="Login" />
+        </button>
       </div>
+      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
     </nav>
   );
 }

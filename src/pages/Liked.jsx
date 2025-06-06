@@ -1,7 +1,7 @@
 // src/pages/Liked.jsx
 import "./Liked.css";
 function Liked({ liked, dummyGadgets, toggleLike }) {
-  const likedItems = dummyGadgets.filter(g => liked.includes(g.id));
+  const likedItems = dummyGadgets.filter(g => liked?.includes(g.id));
   return (
     <div className="liked-page">
       <h2>Liked Items</h2>
