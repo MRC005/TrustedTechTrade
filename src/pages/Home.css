@@ -1,9 +1,23 @@
 /* src/pages/Home.css */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 .home-bg {
-    width: 100vw;           
-    min-height: 100vh;       
-    margin: 0;              
-    padding: 0;             
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,13 +27,12 @@
     background-position: center;
     background-repeat: no-repeat;
     color: #333;
-    position: relative;
+    box-sizing: border-box; /* Added for consistent sizing */
 }
 
-
 .home-content {
-padding: 30px;     
-background: rgba(246, 246, 246, 0.75);
+    padding: 30px;
+    background: rgba(246, 246, 246, 0.75);
     border-radius: 20px;
     box-shadow: 0 6px 18px rgba(34, 34, 34, 0.15);
     backdrop-filter: blur(8px);
@@ -28,6 +41,7 @@ background: rgba(246, 246, 246, 0.75);
     border: 1px solid rgba(0, 0, 0, 0.05);
     animation: fadeIn 1s ease-in-out;
     margin: 2rem;
+    box-sizing: border-box; /* Added */
 }
 
 @keyframes fadeIn {
@@ -35,7 +49,6 @@ background: rgba(246, 246, 246, 0.75);
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -85,6 +98,7 @@ background: rgba(246, 246, 246, 0.75);
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+    flex-wrap: wrap; /* Added for better responsiveness */
 }
 
 .home-buttons button {
@@ -98,6 +112,7 @@ background: rgba(246, 246, 246, 0.75);
     transition: all 0.3s ease;
     font-weight: 600;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 140px; /* Added for consistent button size */
 }
 
 .home-buttons button:hover {
@@ -126,13 +141,15 @@ background: rgba(246, 246, 246, 0.75);
 
     .home-buttons button {
         width: 100%;
+        min-width: unset;
     }
 }
 
+
 .ttt-footer {
-    width: 100vw;
+    width: 100%;
     color: #fff;
-background: rgba(57, 28, 2, 0.75);
+    background: rgba(57, 28, 2, 0.75);
     box-shadow: 0 6px 18px rgba(34, 34, 34, 0.15);
     backdrop-filter: blur(10px);
     text-align: center;
@@ -143,6 +160,7 @@ background: rgba(57, 28, 2, 0.75);
     font-size: 1rem;
     box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
     margin-top: auto;
+    box-sizing: border-box; 
 }
 
 .footer-content {
@@ -154,13 +172,7 @@ background: rgba(57, 28, 2, 0.75);
 }
 
 .ttt-footer a {
-  color: #dde724;
-  text-decoration: none;
+    color: #dde724;
+    text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        font-size: 0.95rem;
-        padding: 0 1rem;
-    }
-}

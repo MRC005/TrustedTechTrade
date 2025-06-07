@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import Cart from "./pages/Cart";
 import Liked from "./pages/Liked";
+import Sell from "./pages/Sell"; 
 import dummyGadgets from "./data/dummyGadgets";
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
         <Route path="/liked" element={
           <Liked liked={liked} dummyGadgets={dummyGadgets} toggleLike={toggleLike} />
         } />
+        <Route path="/sell" element={<Sell />} /> 
       </Routes>
     </>
   );

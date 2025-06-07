@@ -1,27 +1,30 @@
-/* src/components/GadgetCard.css */
 .gadget-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  width: 100%;
+  max-width: 210px;
+  min-width: 0;
+  margin: 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(34,34,34,0.10); 
   overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-  width: 300px;           
-  height: 370px;          
-  margin: 0 auto;
+  transition: transform 0.18s, box-shadow 0.18s;
+  width: 300px;
+  height: 370px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 1.5px solid #f3f3f3; 
   justify-content: flex-start;
 }
 
 .gadget-card:hover,
 .gadget-card:focus {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 4px 24px rgba(255,107,0,0.11);
-  border: 2px solid #ff6b00;
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(255,107,0,0.13);
+  border: 1.5px solid #ff6b00;
 }
+
 
 .gadget-img {
   width: 100%;
@@ -60,11 +63,12 @@
 
 .gadget-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
   margin: 2rem 0;
-  justify-items: center; 
+  justify-items: center;
 }
+
 
 .gadget-actions {
   display: flex;
@@ -89,13 +93,3 @@
 .like-btn:hover { background: #ffe5e0; color: #e53935; }
 .cart-btn:hover { background: #ffe5cc; color: #ff6b00; }
 
-@media (max-width: 600px) {
-  .gadget-card {
-    width: 95vw;
-    min-width: 0;
-    height: auto;
-  }
-  .gadget-img {
-    height: 150px;
-  }
-}
