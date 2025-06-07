@@ -1,13 +1,13 @@
-// src/components/GadgetCard.jsx
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import "./GadgetCard.css";
 
 function GadgetCard({ gadget, liked, inCart, onLike, onCart, onClick }) {
-  console.log("Rendering image:", gadget.image); // Debug: shows image path in console
+  console.log("Rendering image:", gadget.image);
 
   return (
-    <div className="gadget-card" onClick={onClick} tabIndex={0}>
+    <div className="gadget-card" onClick={onClick} tabIndex={0} title="Tap for owner info">
       <img src={gadget.image} alt={gadget.name} className="gadget-img" />
+      <div className="card-overlay-tip">Tap for Owner Info</div>
       <h3 className="gadget-title">{gadget.name}</h3>
       <div className="gadget-condition">
         Condition: <span>{gadget.condition}</span>

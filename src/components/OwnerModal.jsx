@@ -1,4 +1,3 @@
-// src/components/OwnerModal.jsx
 import "./OwnerModal.css";
 function OwnerModal({ owner, gadget, onClose }) {
   return (

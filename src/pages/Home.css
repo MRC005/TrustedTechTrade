@@ -1,4 +1,3 @@
-/* src/pages/Home.css */
 html, body, #root {
   margin: 0;
   padding: 0;
@@ -27,7 +26,7 @@ html, body, #root {
     background-position: center;
     background-repeat: no-repeat;
     color: #333;
-    box-sizing: border-box; /* Added for consistent sizing */
+    box-sizing: border-box; 
 }
 
 .home-content {
@@ -98,7 +97,7 @@ html, body, #root {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    flex-wrap: wrap; /* Added for better responsiveness */
+    flex-wrap: wrap; 
 }
 
 .home-buttons button {
@@ -112,7 +111,7 @@ html, body, #root {
     transition: all 0.3s ease;
     font-weight: 600;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 140px; /* Added for consistent button size */
+    min-width: 140px;
 }
 
 .home-buttons button:hover {

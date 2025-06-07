@@ -12,7 +12,7 @@ html, body, #root {
   box-sizing: inherit;
 }
 
-/* --- Responsive Navbar and Footer --- */
+/* Responsive Navbar and Footer  */
 @media (max-width: 768px) {
   .ttt-navbar {
     flex-direction: column;
@@ -54,7 +54,7 @@ html, body, #root {
 }
 
 
-/* --- Responsive Home Page --- */
+/* Home Page */
 @media (max-width: 768px) {
   .home-content {
     padding: 2rem;
@@ -72,7 +72,7 @@ html, body, #root {
   }
 }
 
-/* --- Responsive Browse Header --- */
+ /* Browse Header */
 @media (max-width: 900px) {
   .browse-header-row {
     flex-direction: column;
@@ -90,7 +90,7 @@ html, body, #root {
   }
 }
 
-/* --- Responsive Gadget Grid (4/3/2 per row) --- */
+ /* Gadget Grid  */
 .gadget-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -111,7 +111,7 @@ html, body, #root {
 }
 @media (max-width: 600px) {
   .gadget-list {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 0.7rem;
   }
   .gadget-card {
@@ -125,7 +125,7 @@ html, body, #root {
   }
 }
 
-/* --- Responsive Gadget Card --- */
+ /* Gadget Card  */
 .gadget-card {
   width: 100%;
   max-width: 210px;
@@ -164,7 +164,7 @@ html, body, #root {
   }
 }
 
-/* --- Responsive Cart Page --- */
+/* Cart Page  */
 @media (max-width: 768px) {
   .cart-page {
     padding: 0 1rem;
@@ -186,7 +186,7 @@ html, body, #root {
   }
 }
 
-/* --- Responsive Liked Page --- */
+ /* Liked Page  */
 @media (max-width: 768px) {
   .liked-page {
     padding: 0 1rem;
@@ -202,3 +202,4 @@ html, body, #root {
     gap: 0.7rem;
   }
 }
+

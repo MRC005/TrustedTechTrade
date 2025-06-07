@@ -12,7 +12,6 @@ const LoginPopup = ({ setShowLogin }) => {
 
   const onLogin = async (e) => {
     e.preventDefault();
-    // Simulate login/signup (replace with real API in production)
     setTimeout(() => {
       if (curState === "Sign Up") {
         alert("Account created! Please log in.");

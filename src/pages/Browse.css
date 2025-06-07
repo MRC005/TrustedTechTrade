@@ -55,13 +55,15 @@
 
 .category-scroll {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; 
   align-items: flex-start;
   overflow-x: auto;
-  gap: 2.2rem;
+  gap: 2.2rem; 
   padding: 1.2rem 0 0.3rem 0;
   scrollbar-width: thin;
   margin-bottom: 1rem;
+  width: 100%;
+  min-width: 0;
 }
 
 .category-circle-btn {
@@ -73,7 +75,10 @@
   cursor: pointer;
   outline: none;
   transition: transform 0.2s;
+  flex: 0 0 auto; 
+  min-width: 70px; 
 }
+
 
 .category-circle-btn.active,
 .category-circle-btn:hover,

@@ -7,11 +7,11 @@ const dummyGadgets = [
     category: "Mobile",
     image: "https://ik.imagekit.io/budli/images/full/1333feda85d873277ba9bb1a3e3d3d14.jpg?tr=h-250%2Cw-250%2Ccm-pad_resize&ik-sdk-version=react-1.1.1",
     condition: "Good",
-    owner: { name: "Amit Sharma", phone: "+91-9876543210", email: "amitsharma@gmail.com", address: "123 MG Road, Mumbai" }
+    owner: { name: "Amit Sharma", phone: "+91-9876543210", email: "amitsharma@gmail.com", address: "123 MG Road, Guwahati" }
   },
   {
     id: 2,
-    name: "Samsung Galaxy S24",
+    name: "Samsung Galaxy S24 Ultra",
     price: 42999,
     category: "Mobile",
     image: "https://t4.ftcdn.net/jpg/07/41/91/45/360_F_741914543_x0Pt2nGdbQo2Farkxh7HpFMDH8JDyaiR.webp",
@@ -293,7 +293,7 @@ const dummyGadgets = [
     category: "Automobile",
     image: "https://imgd.aeplcdn.com/300x225/vimages/202505/3976143_31769_27_1747940955550.jpg",
     condition: "Used",
-    owner: { name: "Priya Singh", phone: "+91-9123456789", email: "priyasingh@gmail.com", address: "45 Park Street, Kolkata" }
+    owner: { name: "Priya Singh", phone: "+91-9123456789", email: "priyasingh@gmail.com", address: "45 Park Street, Delhi" }
   },
   {
     id: 33,

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart, FaHeart, FaUserCircle } from "react-icons/fa";
-import LoginPopup from "./LoginPopup"; // import the popup
+import LoginPopup from "./LoginPopup"; 
 import "./Navbar.css";
 
 function Navbar({ cartCount, likedCount }) {

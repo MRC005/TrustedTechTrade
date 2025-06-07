@@ -118,7 +118,6 @@
   to { opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive for mobile */
 @media (max-width: 500px) {
   .login-popup-container {
     min-width: unset;
